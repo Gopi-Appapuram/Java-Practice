@@ -48,3 +48,51 @@ Search: Results did not match expected outcome.
 Two-Factor Authentication Failures
 
 Issues with authentication steps preventing test completion.
+
+------------------------------------------------------------------------
+
+Test Results Summary
+Environment: Local
+Total Tests: 21
+Passed: 21
+Failures: 0
+
+Recent Updates
+Locator Updates: Adjusted and corrected element locators.
+Code Stabilization: Improved logic and handling for feature stability.
+Previous Issues Resolved
+NoSuchElementException
+
+Resolved by updating element locators.
+ElementClickInterceptedException
+
+Addressed by improving element interaction logic.
+AssertionError
+
+Fixed by aligning expected results with actual outcomes.
+Locators
+
+Corrected to ensure accurate element targeting.
+Okta 400 Bad Request
+
+Resolved and no longer blocking progress.
+Next Steps
+Two-Factor Authentication: Handle if Jenkins encounters failures.
+Review Code Changes: Ensure all updates align with project requirements.
+Continuous Integration: Run tests on the Jenkins pipeline to ensure consistent results.
+
+
+---------------------------------------------------------------------------------------
+
+Jenkins Test Results Summary
+Total Tests: 21
+Passed: 20
+Failures: 1
+
+Current Issue
+NoSuchElementException:
+Employee Header: Element not found. This issue is present only in Jenkins.
+Previous Resolutions
+Locator Updates: Adjusted and corrected element locators.
+Code Stabilization: Improved logic and handling for feature stability.
+Okta 400 Bad Request: Resolved and no longer blocking progress.
