@@ -1,0 +1,50 @@
+Test Results Summary
+Branch: "dev"
+Build System: Jenkins
+Total Tests: 22
+Failures: 11
+
+Exceptions and Issues Encountered:
+NoSuchElementException
+
+Tax Year Dropdown: The element was not found on the page.
+ElementClickInterceptedException
+
+Filters Button: Multiple instances where clicks were interrupted.
+ClassCastException
+
+Checkbox: An unexpected type was encountered during casting.
+AssertionError
+
+Search: The results did not match the expected outcome.
+NoSuchElementException
+
+Controlled Group Header: The element was not found on the page.
+
+
+Test Results Summary
+Environment: Local
+Total Tests: 22
+Failures: 14
+
+New Issue
+Okta 400 Bad Request
+This is a blocker preventing further stabilization of the code.
+
+Previous Exceptions and Issues:
+NoSuchElementException
+
+Tax Year Dropdown: Element not found.
+Controlled Group Header: Element not found.
+ElementClickInterceptedException
+
+Filters Button: Multiple click interruptions.
+ClassCastException
+
+Checkbox: Incorrect type casting.
+AssertionError
+
+Search: Results did not match expected outcome.
+Two-Factor Authentication Failures
+
+Issues with authentication steps preventing test completion.
