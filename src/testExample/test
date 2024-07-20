@@ -96,3 +96,13 @@ Previous Resolutions
 Locator Updates: Adjusted and corrected element locators.
 Code Stabilization: Improved logic and handling for feature stability.
 Okta 400 Bad Request: Resolved and no longer blocking progress.
+
+
+What We’ve Done:
+Default Page: The first page of results shows up automatically.
+Results per Page: We’ve set a maximum of 20 results per page.
+Total Results: The total number of results is now shown below the results list.
+Current Page Highlight: The current page number is highlighted in the color "rgb(93, 286, 324)".
+Pagination Navigation: You can now navigate to any page using the pagination controls.
+Adjustable Results: Users can change how many results they see per page. We’ve made sure it shows the correct number of results.
+Edge Cases: We’ve tested special cases to ensure the "previous" and "next" buttons work correctly.
