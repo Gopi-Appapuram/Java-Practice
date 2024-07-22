@@ -106,3 +106,33 @@ Current Page Highlight: The current page number is highlighted in the color "rgb
 Pagination Navigation: You can now navigate to any page using the pagination controls.
 Adjustable Results: Users can change how many results they see per page. We’ve made sure it shows the correct number of results.
 Edge Cases: We’ve tested special cases to ensure the "previous" and "next" buttons work correctly.
+
+
+
+
+
+Set<String> visitedPages = new HashSet<>();
+    boolean morePagesToVisit = true;
+
+    while (morePagesToVisit) {
+        List<WebElement> pageNumberButtonList = findElements(pageNumberButtons);
+        morePagesToVisit = false; // Assume no more pages initially
+
+        for (WebElement pageNumber : pageNumberButtonList) {
+            String pageNumberText = pageNumber.getText();
+
+            // Check if the page has already been visited
+            if (visitedPages.contains(pageNumberText)) {
+                continue;
+            }
+
+            scrollElementIntoView(findElement(pageNationControls));
+            pageNumber.click();
+            Logger.info("Clicked on page number " + pageNumberText);
+            Assert.assertTrue(findElements(actionsArrows).size() <= Integer.parseInt(pageSize));
+            Logger.info("All pages maintained the same user setting for page results.");
+
+            visitedPages.add(pageNumberText);
+            morePagesToVisit = true; // There might be more pages to visit after the click
+        }
+    }
