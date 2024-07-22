@@ -136,3 +136,35 @@ Set<String> visitedPages = new HashSet<>();
             morePagesToVisit = true; // There might be more pages to visit after the click
         }
     }
+
+
+
+
+
+
+
+
+
+Scenario: Ensure full keyboard accessibility for pagination controls
+    Given the user is on a search results page with pagination controls
+    When the user tabs through the page
+    Then the focus should move sequentially through the "Previous" button, page number links, and "Next" button
+    And the "First" and "Last" buttons should also be focusable and navigable via keyboard
+    When the user presses the "Enter" key while focusing on the "Next" button
+    Then the user should be navigated to the next page of results
+    When the user presses the "Enter" key while focusing on the "Previous" button
+    Then the user should be navigated to the previous page of results
+    When the user presses the "Enter" key while focusing on a specific page number link
+    Then the user should be navigated to the selected page number
+    When the user presses the "Space" key while focusing on a pagination control
+    Then the pagination control should be activated and the user should be navigated accordingly
+    When the user tabs through the page
+    Then each pagination control should visibly indicate focus (e.g., outline, highlight)
+    When a screen reader is used
+    Then each pagination control should be announced clearly and correctly by the screen reader
+    When the user navigates through pages and new content is loaded
+    Then the pagination controls should remain accessible and operable via keyboard
+    When the user tests keyboard navigation on various screen sizes and resolutions
+    Then the pagination controls should be accessible and operable in all tested scenarios
+    When the user tabs through focusable elements within pagination controls that have nested focusable elements
+    Then the focus should correctly move through all nested elements and the main pagination controls
