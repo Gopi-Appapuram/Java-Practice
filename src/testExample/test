@@ -168,3 +168,26 @@ Scenario: Ensure full keyboard accessibility for pagination controls
     Then the pagination controls should be accessible and operable in all tested scenarios
     When the user tabs through focusable elements within pagination controls that have nested focusable elements
     Then the focus should correctly move through all nested elements and the main pagination controls
+
+
+
+    QE Findings - ACANXG-19909
+    Story Description
+    We need to verify that the search box in filters for Organization and FEIN is clearly visible and operates as expected.
+
+    Steps to Reproduce
+    Navigate to the Filter Section: Open the application and go to the filter section where the search box for Organization and FEIN is located.
+    Verify Visibility: Check that the search box for Organization and FEIN is clearly visible.
+    Test Functionality: Enter different search queries to ensure that the search functionality works as expected.
+    Compare UI with Approved UX Pin: Cross-reference the current UI with the approved UX Pin to verify alignment and design consistency.
+    Expectations
+    The search box for Organization and FEIN should be clearly visible and easily accessible.
+    The search functionality should work correctly, providing accurate results based on the input.
+    The UI elements should align as per the approved UX Pin design.
+    Actual Results
+    Functionality: The search box for Organization and FEIN is functional and operates as expected. Search queries return accurate results.
+    UI Comparison: While the functionality is correct, there are some alignment issues observed:
+    Dropdown Box: Misalignment with the surrounding elements.
+    Dropdown Area and Options: Options in the dropdown do not align as per the approved UX design.
+    Evidence
+    Please refer to the attached evidence for detailed screenshots and observations regarding the alignment issues.
