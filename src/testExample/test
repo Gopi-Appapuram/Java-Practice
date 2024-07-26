@@ -191,3 +191,18 @@ Scenario: Ensure full keyboard accessibility for pagination controls
     Dropdown Area and Options: Options in the dropdown do not align as per the approved UX design.
     Evidence
     Please refer to the attached evidence for detailed screenshots and observations regarding the alignment issues.
+
+
+    Export Summary for CSV and XLSX
+
+    Objective: Verify that the exported data in CSV and XLSX formats matches the data displayed in the UI.
+
+    Export Data:
+
+    Initiate the export process for summary data in CSV and XLSX formats.
+    UI Data Verification:
+
+    Compare the exported data with the data displayed in the user interface to ensure consistency and accuracy.
+    Note:
+
+    As there is no access to the database, validation is performed exclusively through the UI.
