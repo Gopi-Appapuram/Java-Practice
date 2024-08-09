@@ -206,3 +206,30 @@ Scenario: Ensure full keyboard accessibility for pagination controls
     Note:
 
     As there is no access to the database, validation is performed exclusively through the UI.
+
+
+
+
+    public static void updateProperty(String key, String value) {
+            Properties properties = new Properties();
+            try (InputStream input = ConfigUpdater.class.getClassLoader().getResourceAsStream(CONFIG_FILE_PATH)) {
+                // Load the existing properties file
+                if (input == null) {
+                    System.out.println("Sorry, unable to find " + CONFIG_FILE_PATH);
+                    return;
+                }
+                properties.load(input);
+
+                // Update the specified key with the new value
+                properties.setProperty(key, value);
+
+                // Save the properties file
+                try (OutputStream output = new FileOutputStream(CONFIG_FILE_PATH)) {
+                    properties.store(output, null);
+                    System.out.println("Updated " + key + " in " + CONFIG_FILE_PATH);
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
